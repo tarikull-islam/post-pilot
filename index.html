@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ! Add favicon icon here -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Post Pilot</title>
+    <!-- ! css here -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Link Swiper's CSS -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    /> -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- ! JS -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/fontawesome.min.js"
+      integrity="sha512-1M9vud0lqoXACA9QaA8IY8k1VR2dMJ2Qmqzt9pN2AH7eQHWpNsxBpaayV0kKkUsF7FLVQ2sA2SSc8w5VOm7/mg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      defer
+    ></script>
+    <script src="/js/scrollreveal.min.js" defer></script>
+    <script src="/js/jquery.min.js" defer></script>
+    <script src="/js/bootstrap.bundle.min.js" defer></script>
+    <script src="/js/main.js" defer></script>
+  </head>
+  <body>
+    <header id="header" class="header">
+      <nav
+        class="nav container py-2 align-items-center justify-content-between"
+        id="nav"
+      >
+        <a href="/" class="nav-brand">
+          <img src="/assets/Logo-postpilot.webp" alt="Logo-postpilot" />
+        </a>
+        <div class="nav-menu">
+          <div class="nav-list d-md-flex align-items-md-center">
+            <div class="nav-item pb-2 pb-md-0 dropdown-menu-item">
+              <span>Resources</span>
+              <i class="fa-solid fa-angle-down"></i>
+              <div class="sub-nav-list">
+                <div
+                  class="sub-nav-item pb-2 pb-md-0 d-flex flex-column gap-2 mt-1"
+                >
+                  <a href="#" class="sub-nav-link p-0"> LAPTOP 1 </a>
+                  <a href="#" class="sub-nav-link p-0"> LAPTOP 2 </a>
+                  <a href="#" class="sub-nav-link p-0"> LAPTOP 2 </a>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item pb-2 pb-md-0">
+              <a href="#" class="nav-link p-0">Success stories</a>
+            </div>
+            <div class="nav-item pb-2 pb-md-0 dropdown-menu-item">
+              <span>Company</span>
+              <i class="fa-solid fa-angle-down"></i>
+              <div class="sub-nav-list">
+                <div
+                  class="sub-nav-item pb-2 pb-md-0 d-flex flex-column gap-2 mt-1"
+                >
+                  <a href="#" class="sub-nav-link p-0"> Tap 1 </a>
+                  <a href="#" class="sub-nav-link p-0"> Tap 2 </a>
+                  <a href="#" class="sub-nav-link p-0"> Tap 2 </a>
+                </div>
+              </div>
+            </div>
+            <div class="nav-item pb-2 pb-md-0">
+              <a href="#" class="nav-link p-0">Pricing</a>
+            </div>
+            <div onclick="toggleMenu()" class="close-fly-menu d-md-none">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <div class="ctx-action d-flex gap-1 align-items-center">
+            <a href="#" class="btn btn__fill-white">Login</a>
+            <a href="#" class="btn btn__fill-yellow">Create free account</a>
+            <div onclick="toggleMenu()" class="open-fly-menu d-md-none">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="overflow-x-hidden">
+      <section class="home pt-3 pt-md-0" id="home">
+        <div class="container d-md-flex align-items-center py-5">
+          <div class="text-content">
+            <h2 class="title">
+              Meet your <br />
+              <span class="grace__font">favorite</span>new (old) <br />
+              marketing channel.
+            </h2>
+            <p class="description">
+              Remarkable results. Easier than email. Postcard marketing
+              reinvented for modern ecommerce.
+            </p>
+            <div class="rating-box">
+              <a href="#" class="btn btn__fill-yellow">Try it Risk-free</a>
+            </div>
+          </div>
+          <div class="img-content mt-md-5">
+            <img
+              src="/assets/hero-banner.webp"
+              alt="hero-banner"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="trusted" id="trusted">
+        <div class="container">
+          <div class="d-flex flex-column align-items-center">
+            <h4 class="title text-center py-3 py-md-5">
+              Trusted by thousands of top DTC
+              <span class="grace__font">brands.</span>
+            </h4>
+          </div>
+          <div class="wrapper">
+            <div
+              class="item mb-4 mb-md-0 d-flex flex-column justify-content-center align-items-center gap-3"
+            >
+              <img
+                src="/assets/chew_gum.webp"
+                alt="chew_gum"
+                class="img-fluid"
+              />
+              <img
+                src="/assets/run_gum.webp"
+                alt="run_gum"
+                class="img-fluid footer-img"
+              />
+            </div>
+            <div
+              class="item mb-4 mb-md-0 d-flex flex-column justify-content-center align-items-center gap-3"
+            >
+              <img
+                src="/assets/protect&nourish.webp"
+                alt="chew_gum"
+                class="img-fluid"
+              />
+              <img
+                src="/assets/beardbrand.webp"
+                alt="run_gum"
+                class="img-fluid footer-img"
+              />
+            </div>
+            <div
+              class="item mb-4 mb-md-0 d-flex flex-column justify-content-center align-items-center gap-3"
+            >
+              <img src="/assets/provip.webp" alt="chew_gum" class="img-fluid" />
+              <img
+                src="/assets/promix.webp"
+                alt="run_gum"
+                class="img-fluid footer-img"
+              />
+            </div>
+            <div
+              class="item mb-4 mb-md-0 d-flex flex-column justify-content-center align-items-center gap-3"
+            >
+              <img
+                src="/assets/we-miss-you.webp"
+                alt="chew_gum"
+                class="img-fluid"
+              />
+              <img
+                src="/assets/scotch.webp"
+                alt="scotch"
+                class="img-fluid footer-img"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="direct-mail" id="direct-mail">
+        <div class="container">
+          <div class="d-flex flex-column align-items-center">
+            <h4 class="title text-center py-3 py-md-5">
+              Why use direct mail? It
+              <span class="grace__font">works</span> like crazy.
+            </h4>
+          </div>
+          <div class="wrapper">
+            <div class="item text-center">
+              <h4 class="title">28X</h4>
+              <p class="description">
+                Higher response rate than email & digital
+              </p>
+            </div>
+            <div class="item text-center">
+              <img
+                src="/assets/data_img.webp"
+                alt="data_img"
+                class="img-fluid"
+              />
+              <p class="description">Your messages get read</p>
+            </div>
+            <div class="item text-center">
+              <h4 class="title">17 Days</h4>
+              <p class="description">
+                Lifespan of a postcard vs. seconds for email or SMS
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="post-pilot" id="post-pilot">
+        <div class="container">
+          <div class="d-flex flex-column align-items-center">
+            <h4 class="title text-center">
+              PostPilot makes it a <span class="grace__font">cinch</span> to
+              send personalized, profit-generating postcards.ke crazy.
+            </h4>
+          </div>
+          <div class="wrapper d-flex flex-column">
+            <div class="item-wrapper">
+              <div class="item">
+                <h4 class="item-title text-start">
+                  <span class="grace__font">Powerful</span> acquisition &
+                  retention
+                </h4>
+                <p class="description py-md-3">
+                  Send one-off or triggered campaigns to customers & prospects.
+                  Target email leads with MailMatch™.
+                </p>
+                <div class="card position-relative">
+                  <p class="card-title">
+                    It’s like Klaviyo for direct mail. The results are
+                    absolutely insane.
+                  </p>
+                  <div
+                    class="card-bottom d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="brand-parson">Ash Melwani, CMO</h6>
+                    <img src="/assets/obvi.webp" alt="" class="img-fluid" />
+                  </div>
+                  <div class="colon-icon position-absolute">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="35"
+                      viewBox="0 0 34 35"
+                      fill="none"
+                    >
+                      <path
+                        d="M10.3146 18.2636C11.6411 18.2636 12.6757 18.7953 13.4185 19.8586C14.2144 20.866 14.6123 22.1253 14.6123 23.6364C14.6123 25.2595 14.0817 26.6027 13.0206 27.666C11.9594 28.6734 10.6329 29.1772 9.04117 29.1772C7.23718 29.1772 5.75155 28.4776 4.58424 27.0784C3.41695 25.6793 2.83331 23.8603 2.83331 21.6217C2.83331 18.4874 3.78837 15.6331 5.69848 13.0586C7.6086 10.4842 10.4472 8.30145 14.2144 6.5105V8.60926C11.9859 9.67264 10.0758 11.0718 8.48406 12.8068C6.8923 14.4858 6.09642 16.1648 6.09642 17.8438C6.09642 18.9631 6.38824 19.5229 6.97189 19.5229C7.078 19.5229 7.21066 19.4948 7.36983 19.4389C7.52901 19.3269 7.68819 19.2431 7.84736 19.187C8.64323 18.5714 9.46565 18.2636 10.3146 18.2636ZM26.8689 18.2636C28.1953 18.2636 29.2301 18.7953 29.9728 19.8586C30.7687 20.866 31.1666 22.1253 31.1666 23.6364C31.1666 25.2595 30.6361 26.6027 29.5749 27.666C28.5137 28.6734 27.1872 29.1772 25.5955 29.1772C23.7915 29.1772 22.3058 28.4776 21.1385 27.0784C19.9713 25.6793 19.3876 23.8603 19.3876 21.6217C19.3876 18.4874 20.3427 15.6331 22.2528 13.0586C24.1629 10.4842 27.0015 8.30145 30.7687 6.5105V8.60926C28.5403 9.67264 26.6302 11.0718 25.0384 12.8068C23.4467 14.4858 22.6508 16.1648 22.6508 17.8438C22.6508 18.9631 22.9426 19.5229 23.5261 19.5229C23.6322 19.5229 23.765 19.4948 23.9241 19.4389C24.0833 19.3269 24.2425 19.2431 24.4016 19.187C25.1975 18.5714 26.0199 18.2636 26.8689 18.2636Z"
+                        fill="#FF6D2C"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-wrapper">
+              <div class="item">
+                <h4 class="text-start">
+                  <span class="grace__font">Fight back</span> against iOS
+                  updates, jacked-up CPCs & spam folders
+                </h4>
+                <p class="description py-md-3">
+                  Deliver your message to all of your customers — for less than
+                  the cost of a click.
+                </p>
+                <div class="card position-relative">
+                  <p class="card-title">
+                    PostPilot is our new weapon against sinking email engagement
+                    and rising PPC costs. The results and ROI have been
+                    outstanding. It’s now one of our core marketing channels to
+                    increase acquisition & LTV.
+                  </p>
+                  <div
+                    class="card-bottom d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="brand-parson">Leah Keith, GM</h6>
+                    <img
+                      src="/assets/overlander.webp"
+                      alt=""
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="colon-icon position-absolute">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="35"
+                      viewBox="0 0 34 35"
+                      fill="none"
+                    >
+                      <path
+                        d="M10.3146 18.2636C11.6411 18.2636 12.6757 18.7953 13.4185 19.8586C14.2144 20.866 14.6123 22.1253 14.6123 23.6364C14.6123 25.2595 14.0817 26.6027 13.0206 27.666C11.9594 28.6734 10.6329 29.1772 9.04117 29.1772C7.23718 29.1772 5.75155 28.4776 4.58424 27.0784C3.41695 25.6793 2.83331 23.8603 2.83331 21.6217C2.83331 18.4874 3.78837 15.6331 5.69848 13.0586C7.6086 10.4842 10.4472 8.30145 14.2144 6.5105V8.60926C11.9859 9.67264 10.0758 11.0718 8.48406 12.8068C6.8923 14.4858 6.09642 16.1648 6.09642 17.8438C6.09642 18.9631 6.38824 19.5229 6.97189 19.5229C7.078 19.5229 7.21066 19.4948 7.36983 19.4389C7.52901 19.3269 7.68819 19.2431 7.84736 19.187C8.64323 18.5714 9.46565 18.2636 10.3146 18.2636ZM26.8689 18.2636C28.1953 18.2636 29.2301 18.7953 29.9728 19.8586C30.7687 20.866 31.1666 22.1253 31.1666 23.6364C31.1666 25.2595 30.6361 26.6027 29.5749 27.666C28.5137 28.6734 27.1872 29.1772 25.5955 29.1772C23.7915 29.1772 22.3058 28.4776 21.1385 27.0784C19.9713 25.6793 19.3876 23.8603 19.3876 21.6217C19.3876 18.4874 20.3427 15.6331 22.2528 13.0586C24.1629 10.4842 27.0015 8.30145 30.7687 6.5105V8.60926C28.5403 9.67264 26.6302 11.0718 25.0384 12.8068C23.4467 14.4858 22.6508 16.1648 22.6508 17.8438C22.6508 18.9631 22.9426 19.5229 23.5261 19.5229C23.6322 19.5229 23.765 19.4948 23.9241 19.4389C24.0833 19.3269 24.2425 19.2431 24.4016 19.187C25.1975 18.5714 26.0199 18.2636 26.8689 18.2636Z"
+                        fill="#FF6D2C"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item-wrapper">
+              <div class="item">
+                <h4 class="text-start">
+                  Done for
+                  <span class="grace__font">you</span>
+                </h4>
+                <p class="description py-md-3">
+                  Send one-off or triggered campaigns to customers & prospects.
+                  Target email leads with MailMatch™.
+                </p>
+                <div class="card position-relative">
+                  <p class="card-title">
+                    The team is so knowledgeable and beyond helpful. I’m blown
+                    away by their communication, detail, and attentiveness and
+                    always feel like they have our best interest in mind.
+                    Definitely worth a try.
+                  </p>
+                  <div
+                    class="card-bottom d-flex justify-content-between align-items-center"
+                  >
+                    <h6 class="brand-parson">
+                      Holly Davies, Marketing Director
+                    </h6>
+                    <img src="/assets/paragon.webp" alt="" class="img-fluid" />
+                  </div>
+                  <div class="colon-icon position-absolute">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="34"
+                      height="35"
+                      viewBox="0 0 34 35"
+                      fill="none"
+                    >
+                      <path
+                        d="M10.3146 18.2636C11.6411 18.2636 12.6757 18.7953 13.4185 19.8586C14.2144 20.866 14.6123 22.1253 14.6123 23.6364C14.6123 25.2595 14.0817 26.6027 13.0206 27.666C11.9594 28.6734 10.6329 29.1772 9.04117 29.1772C7.23718 29.1772 5.75155 28.4776 4.58424 27.0784C3.41695 25.6793 2.83331 23.8603 2.83331 21.6217C2.83331 18.4874 3.78837 15.6331 5.69848 13.0586C7.6086 10.4842 10.4472 8.30145 14.2144 6.5105V8.60926C11.9859 9.67264 10.0758 11.0718 8.48406 12.8068C6.8923 14.4858 6.09642 16.1648 6.09642 17.8438C6.09642 18.9631 6.38824 19.5229 6.97189 19.5229C7.078 19.5229 7.21066 19.4948 7.36983 19.4389C7.52901 19.3269 7.68819 19.2431 7.84736 19.187C8.64323 18.5714 9.46565 18.2636 10.3146 18.2636ZM26.8689 18.2636C28.1953 18.2636 29.2301 18.7953 29.9728 19.8586C30.7687 20.866 31.1666 22.1253 31.1666 23.6364C31.1666 25.2595 30.6361 26.6027 29.5749 27.666C28.5137 28.6734 27.1872 29.1772 25.5955 29.1772C23.7915 29.1772 22.3058 28.4776 21.1385 27.0784C19.9713 25.6793 19.3876 23.8603 19.3876 21.6217C19.3876 18.4874 20.3427 15.6331 22.2528 13.0586C24.1629 10.4842 27.0015 8.30145 30.7687 6.5105V8.60926C28.5403 9.67264 26.6302 11.0718 25.0384 12.8068C23.4467 14.4858 22.6508 16.1648 22.6508 17.8438C22.6508 18.9631 22.9426 19.5229 23.5261 19.5229C23.6322 19.5229 23.765 19.4948 23.9241 19.4389C24.0833 19.3269 24.2425 19.2431 24.4016 19.187C25.1975 18.5714 26.0199 18.2636 26.8689 18.2636Z"
+                        fill="#FF6D2C"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <a href="#" class="btn btn__fill-yellow w-50 mt-2 mt-md-4 p-2"
+                  >Try it RISK-free</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="your-brand" id="your-brand">
+        <div class="container">
+          <div class="d-flex flex-column align-items-center">
+            <h4 class="title text-center">
+              Everything your brand needs to <br />
+              <span class="grace__font">make your brand unforgettable</span>
+            </h4>
+          </div>
+          <div class="wrapper">
+            <div class="item d-flex flex-column align-items-center">
+              <img src="/assets/dropshipping.webp" alt="" class="img-fluid" />
+              <h6 class="item-title">Plug-and-play with your stack</h6>
+              <p class="item-description">
+                Native integrations provide seamless segmentation, automation &
+                tracking. No clunky spreadsheets.
+              </p>
+            </div>
+            <div class="item d-flex flex-column align-items-center">
+              <img
+                src="/assets/abanddoned__card.webp"
+                alt=""
+                class="img-fluid pt-3"
+              />
+              <h6 class="item-title">Run campaigns on autopilot</h6>
+              <p class="item-description">
+                Ink profits while you sleep: Just set it and forget it.
+              </p>
+            </div>
+            <div class="item d-flex flex-column align-items-center">
+              <img src="/assets/revenue.webp" alt="" class="img-fluid" />
+              <h6 class="item-title">Real-time ROI dashboard</h6>
+              <p class="item-description">
+                Track performance of every postcard by customer or discount
+                code. Your CFO will love it.
+              </p>
+            </div>
+            <div class="item d-flex flex-column align-items-center">
+              <img src="/assets/longshot.webp" alt="" class="img-fluid" />
+              <h6 class="item-title">
+                Deliver WOW with *real* handwritten cards
+              </h6>
+              <p class="item-description">
+                Our proprietary robots use real pens and ink for an
+                unforgettable VIP touch.
+              </p>
+            </div>
+            <div class="item d-flex flex-column align-items-center">
+              <img src="/assets/star.webp" alt="" class="img-fluid" />
+              <h6 class="item-title">Predictable pricing</h6>
+              <p class="item-description">
+                Unlike CPCs, postage rates don’t change based on competition or
+                who you’re targeting.
+              </p>
+            </div>
+            <div class="item d-flex flex-column align-items-center">
+              <img src="/assets/design.webp" alt="" class="img-fluid" />
+              <h6 class="item-title">Complimentary concierge service</h6>
+              <p class="item-description">
+                DTC is in our DNA. Our pros will build your strategy and custom
+                designs using battle-tested best practices.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fast-launch" id="fast-launch">
+        <div class="container">
+          <div class="d-flex flex-column align-items-center">
+            <h4 class="title text-center">
+              Fast launch. Fast results. <br />
+              <span class="grace__font">Here's how.</span>
+            </h4>
+          </div>
+          <div class="wrapper">
+            <div class="accordion">
+              <div class="accordion-item show">
+                <div class="accordion-number">
+                  <h6 class="grace__font">01</h6>
+                </div>
+                <div class="accordion-body">
+                  <h6 class="accordion-title">Segment</h6>
+                  <div class="accordion-content">
+                    <p>
+                      One-off announcements or automatically triggered flows.
+                      Customers receive their personalized cards within a week.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-number">
+                  <h6 class="grace__font">02</h6>
+                </div>
+                <div class="accordion-body">
+                  <h6 class="accordion-title">Design</h6>
+                  <div class="accordion-content">
+                    <p class="">
+                      One-off announcements or automatically triggered flows.
+                      Customers receive their personalized cards within a week.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-number">
+                  <h6 class="grace__font">03</h6>
+                </div>
+                <div class="accordion-body">
+                  <h6 class="accordion-title">Send</h6>
+                  <div class="accordion-content">
+                    <p class="">
+                      One-off announcements or automatically triggered flows.
+                      Customers receive their personalized cards within a week.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <div class="accordion-number">
+                  <h6 class="grace__font">04</h6>
+                </div>
+                <div class="accordion-body">
+                  <h6 class="accordion-title">Convert</h6>
+                  <div class="accordion-content">
+                    <p class="">
+                      One-off announcements or automatically triggered flows.
+                      Customers receive their personalized cards within a week.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="post-pilot-dtc">
+        <div class="container">
+          <div
+            class="d-flex flex-column align-items-center justify-content-center"
+          >
+            <h4 class="title text-center">
+              PostPilot is 🔥 for
+              <span class="grace__font">DTC</span>
+            </h4>
+          </div>
+          <div class="wrapper d-flex align-items-start">
+            <div class="item">
+              <div
+                class="user-info d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center gap-1 gap-md-2">
+                  <div class="user-img">
+                    <img
+                      src="/assets/helen.webp"
+                      alt="helen"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="user-name-info">
+                    <h6 class="user-name">Jon Tucker</h6>
+                    <a href="#" class="user-uri"><span>@</span>JonTuckerUSA</a>
+                  </div>
+                </div>
+                <div class="twitter-ctx">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+              </div>
+              <p class="description">
+                Email is a killer channel, but if you layer in postal mail you
+                can really supercharge results. The team at
+                <span style="font-weight: 700"
+                  ><span style="font-weight: 700">@PostPilot</span></span
+                >
+                will spark ideas for ya.
+              </p>
+              <p class="description">@getpostpilot. Killer tool.</p>
+            </div>
+            <div class="item">
+              <div
+                class="user-info d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center gap-1 gap-md-2">
+                  <div class="user-img">
+                    <img
+                      src="/assets/helen.webp"
+                      alt="helen"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="user-name-info">
+                    <h6 class="user-name">Helen Guo</h6>
+                    <a href="#" class="user-uri"><span>@</span>HelenGuo_</a>
+                  </div>
+                </div>
+                <div class="twitter-ctx">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+              </div>
+              <p class="description">
+                Been using <span style="font-weight: 700">PostPilot</span> for
+                years. Good for re-engagement. And you can get creative with
+                your messaging.
+              </p>
+            </div>
+            <div class="item">
+              <div
+                class="user-info d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center gap-1 gap-md-2">
+                  <div class="user-img">
+                    <img
+                      src="/assets/nethan.webp"
+                      alt="helen"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="user-name-info">
+                    <h6 class="user-name">Helen Guo</h6>
+                    <a href="#" class="user-uri"><span>@</span>HelenGuo_</a>
+                  </div>
+                </div>
+                <div class="twitter-ctx">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+              </div>
+              <p class="description">
+                We have done some rad winbacks to 360-720 days since purchase
+                that have rocked.
+                <span style="font-weight: 700">PostPilot</span> team is one of
+                my favs.
+              </p>
+            </div>
+            <div class="item">
+              <div
+                class="user-info d-flex align-items-center justify-content-between"
+              >
+                <div class="d-flex align-items-center gap-1 gap-md-2">
+                  <div class="user-img">
+                    <img
+                      src="/assets/chris.webp"
+                      alt="helen"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <div class="user-name-info">
+                    <h6 class="user-name">Helen Guo</h6>
+                    <a href="#" class="user-uri"><span>@</span>HelenGuo_</a>
+                  </div>
+                </div>
+                <div class="twitter-ctx">
+                  <i class="fa-brands fa-twitter"></i>
+                </div>
+              </div>
+              <p class="description">
+                Another +1 for
+                <span style="font-weight: 700">PostPilot .</span> Have only done
+                winbacks, but it's been wonderful. Their team is also top notch.
+                Super helpful every time we set something up.
+              </p>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center">
+            <a href="#" class="btn btn__fill-yellow w-25">Try it RISK-free</a>
+          </div>
+        </div>
+      </section>
+      <section class="latest-trends" id="latest-trends">
+        <div class="container">
+          <div class="d-flex flex-column align-items-center">
+            <h4 class="title text-center">
+              Latest trends &
+              <span class="grace__font">insights</span>
+            </h4>
+          </div>
+          <div class="wrapper">
+            <div class="item d-flex flex-column">
+              <div class="img-container">
+                <img
+                  src="/assets/3-low-cost.webp"
+                  alt=""
+                  class="img-fluid rounded-3"
+                />
+              </div>
+              <h6 class="title">
+                3 Low-Cost Campaigns You Must Run to Win BFCM
+              </h6>
+            </div>
+            <div class="item d-flex flex-column">
+              <img
+                src="/assets/post-card.webp"
+                alt=""
+                class="img-fluid rounded-3"
+              />
+              <h6 class="title">
+                Postcard Marketing: The Definitive Guide to High ROI [2022]
+              </h6>
+            </div>
+            <div class="item d-flex flex-column">
+              <img
+                src="/assets/ultimate-guide.webp"
+                alt=""
+                class="img-fluid rounded-3"
+              />
+              <h6 class="title">
+                The Ultimate Guide to Thank You Notes for Ecommerce
+              </h6>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="try-post-pilot" id="try-post-pilot">
+        <div class="container">
+          <div
+            class="wrapper d-flex align-items-center justify-content-between"
+          >
+            <div class="img-container">
+              <img src="/assets/hand.webp" alt="hand" />
+            </div>
+            <div class="text-content">
+              <h2 class="title text-white">Try PostPilot Risk-Free</h2>
+              <div class="d-flex flex-column gap-md-3">
+                <p class="description">
+                  No contracts. No commitments. Guaranteed results.*
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="#" class="btn btn__fill-white">GET STARTED</a>
+                  <div class="">
+                    <div class="d-flex align-items-center">
+                      <i class="fa-solid fa-star gap-1"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i
+                      ><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="short-des">5.0 Shopify Rating</p>
+                  </div>
+                </div>
+                <p>
+                  * for qualified brands with over $1m annual Shopify revenue.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer overflow-x-hidden" id="footer">
+      <div class="container">
+        <div class="wrapper">
+          <aside class="d-flex flex-column align-items-start">
+            <div class="footer-img">
+              <img
+                src="/assets/eco-label.webp"
+                alt="eco-label"
+                class="img-fluid"
+              />
+            </div>
+            <p>
+              Our paper is sourced from FSC-certified mills. We plant enough
+              trees to more than double our paper usage.
+            </p>
+          </aside>
+          <nav class="nav">
+            <h6 class="heading">Company</h6>
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">About us</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Partner program</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Career</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Contact us</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Privacy Policy</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="nav">
+            <h6 class="heading opacity-0">empty</h6>
+            <ul>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Reviews</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Direct Mail Academy</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Success stories</a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">Terms & conditions</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="nav">
+            <h6 class="heading">Contact</h6>
+            <ul>
+              <li class="nav-item d-flex align-items-center gap-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="25"
+                  height="24"
+                  viewBox="0 0 25 24"
+                  fill="none"
+                >
+                  <path
+                    d="M21.1662 4H4.80256C3.79841 4 2.98438 4.79594 2.98438 5.77778V18.2222C2.98438 19.2041 3.79841 20 4.80256 20H21.1662C22.1704 20 22.9844 19.2041 22.9844 18.2222V5.77778C22.9844 4.79594 22.1704 4 21.1662 4Z"
+                    fill="#FFE8DC"
+                    stroke="#212121"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                  />
+                  <path
+                    d="M9.63375 14.8809L8.66406 15.7861"
+                    stroke="#212121"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                  />
+                  <path
+                    d="M16.332 14.8809L17.3017 15.7861"
+                    stroke="#212121"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                  />
+                  <path
+                    d="M17.5284 8.00098L12.983 12.4454L8.4375 8.00098"
+                    stroke="#212121"
+                    stroke-width="2"
+                    stroke-miterlimit="10"
+                    stroke-linecap="square"
+                  />
+                </svg>
+                <p class="email">support@postpilot.com</p>
+              </li>
+              <li class="nav-item pt-3">
+                <p class="printed">
+                  Printed with ❤️️️ at our facility in South Carolina.
+                </p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer-bottom d-flex justify-content-between">
+          <div class="brand-parent">
+            <div class="footer-brand">
+              <img
+                src="/assets/Logo-postpilot.webp"
+                alt="Logo-postpilot"
+                class="img-fluid"
+              />
+            </div>
+            <p class="copy-right">
+              &copy; 2022 PostPilot, Inc. All rights reserved.
+            </p>
+          </div>
+          <div
+            class="ctx-btn d-flex align-items-center justify-content-center gap-3"
+          >
+            <a href="#" class="btn btn__fill-white">Login</a
+            ><a href="" class="btn btn__fill-yellow">Try it for free</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
