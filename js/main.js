@@ -24,7 +24,7 @@ const sr = ScrollReveal({
   origin: "top",
   distance: "50px",
   duration: 1500,
-  // reset: true,
+  reset: true,
 });
 sr.reveal("#home .img-content ");
 sr.reveal("#home .text-content", {

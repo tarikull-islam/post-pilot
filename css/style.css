@@ -46,7 +46,7 @@
   --normal-font-size: 0.938rem;
   --small-font-size: 0.725rem;
 
-  --button-padding: 0.175rem 0.3rem;
+  --button-padding: 0.115rem 0.2rem;
   /* ! ========== Font line height ==========*/
   --normal-lh: 1;
   --h2-lh: 1.1;
@@ -211,77 +211,113 @@ img {
   left: 0;
   z-index: var(--z-fixed);
 }
-@media screen and (max-width: 768px) {
-  .nav .nav-menu .nav-list {
-    top: 0;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    left: 100%;
-    padding: 2rem;
-    backdrop-filter: blur(40px);
-    color: var(--text-color);
+@media screen and (max-width: 992px) {
+  .nav .btn {
+    font-size: 0.7rem;
   }
-  body.fly-menu .nav .nav-menu .nav-list {
-    left: 0;
+  .nav .nav-menu {
+    gap: 2rem;
   }
-  .nav .nav-menu .nav-list .nav-item,
-  .nav .nav-menu .nav-list .nav-item button {
-    font-weight: var(--font-500);
-    font-size: 1rem;
-  }
-  .nav .nav-menu .nav-list .sub-nav-link {
-    font-size: 0.8rem;
-  }
-  .nav .nav-menu .nav-list .nav-item button,
-  .nav .nav-menu .nav-list .nav-item a {
-    background: transparent;
-    color: var(--text-color);
-  }
-  .nav .nav-menu .dropdown-menu-item .sub-nav-list {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height linear 2.5s;
-  }
-  .nav .nav-menu .dropdown-menu-item:hover .sub-nav-list {
-    max-height: 1000px;
-    overflow: hidden;
-    transition: max-height linear 2.5s;
-  }
-  .nav .nav-menu .dropdown-menu-item:hover i {
-    transform: rotate(-180deg);
-    transition: transform linear 0.5s;
-  }
-  .nav .nav-menu .nav-list .close-fly-menu {
-    position: absolute;
-    right: 0;
-    padding: 1rem;
-    top: 0;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  .nav .nav-menu .open-fly-menu {
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-  .nav .nav-brand {
-    max-width: 7rem;
+  @media screen and (max-width: 768px) {
+    .nav .nav-menu .nav-list {
+      top: 0;
+      position: fixed;
+      height: 100%;
+      width: 40%;
+      right: 100%;
+      padding: 2rem;
+      backdrop-filter: blur(40px);
+      color: var(--text-color);
+    }
+    body.fly-menu .nav .nav-menu .nav-list {
+      right: 0;
+    }
+    .nav .nav-menu .nav-list .nav-item,
+    .nav .nav-menu .nav-list .nav-item button {
+      font-weight: var(--font-500);
+      font-size: 1rem;
+    }
+    .nav .nav-menu .nav-list .sub-nav-link {
+      font-size: 0.8rem;
+    }
+    .nav .nav-menu .nav-list .nav-item button,
+    .nav .nav-menu .nav-list .nav-item a {
+      background: transparent;
+      color: var(--text-color);
+    }
+    .nav .nav-menu .nav-list .nav-item .nav-link:hover,
+    .nav .nav-menu .sub-nav-list .sub-nav-item .sub-nav-link:hover {
+      color: var(--title-grace-color);
+    }
+    .nav .nav-menu .dropdown-menu-item .sub-nav-list {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height linear 2.5s;
+    }
+    .nav .nav-menu .dropdown-menu-item:hover .sub-nav-list {
+      max-height: 1000px;
+      overflow: hidden;
+      transition: max-height linear 2.5s;
+    }
+    .nav .nav-menu .dropdown-menu-item:hover i {
+      transform: rotate(-180deg);
+      transition: transform linear 0.5s;
+    }
+    .nav .nav-menu .nav-list .close-fly-menu {
+      position: absolute;
+      right: 0;
+      padding: 1rem;
+      top: 0;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .nav .nav-menu .open-fly-menu {
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .nav .nav-brand {
+      max-width: 7rem;
+    }
+    .nav .btn {
+      font-size: 0.8rem;
+      padding: 0.3rem;
+    }
+    @media screen and (max-width: 668px) {
+      .nav .nav-menu .nav-list {
+        width: 60%;
+      }
+      @media screen and (max-width: 568px) {
+        .nav .nav-menu .nav-list {
+          width: 75%;
+        }
+        @media screen and (max-width: 468px) {
+          .nav .nav-menu .nav-list {
+            width: 85%;
+          }
+        }
+        @media screen and (max-width: 350px) {
+          .nav .nav-menu .nav-list {
+            width: 100%;
+          }
+        }
+      }
+    }
   }
 }
 @media screen and (min-width: 769px) {
   .nav .nav-menu {
     display: flex;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
   }
   .nav .nav-menu .nav-list {
     display: flex;
-    gap: 2rem;
+    gap: 0.85rem;
   }
   .nav .nav-menu .nav-list .nav-item,
   .nav .nav-menu .nav-list .nav-item button {
     font-weight: var(--font-500);
-    font-size: 1rem;
+    font-size: 0.9rem;
     padding: 0;
   }
   .nav .nav-menu .nav-list .sub-nav-link {
@@ -292,6 +328,10 @@ img {
     background: transparent;
     color: var(--text-color);
     cursor: pointer;
+  }
+  .nav .nav-menu .nav-list .nav-item .nav-link:hover,
+  .nav .nav-menu .sub-nav-list .sub-nav-item .sub-nav-link:hover {
+    color: var(--title-grace-color);
   }
   .nav .nav-menu .dropdown-menu-item .sub-nav-list {
     position: absolute;
@@ -326,7 +366,16 @@ img {
     cursor: pointer;
   }
   .nav .nav-brand {
-    max-width: 10rem;
+    max-width: 6.95rem;
+  }
+  @media screen and (min-width: 992px) {
+    .nav .nav-menu .nav-list .nav-item,
+    .nav .nav-menu .nav-list .nav-item button {
+      font-size: 1.15rem;
+    }
+    .nav .nav-brand {
+      max-width: 10rem;
+    }
   }
 }
 /* ! HOME SECTION CSS */
@@ -354,6 +403,9 @@ img {
     gap: 2rem;
     grid-template-columns: repeat(2, minmax(220px, 500px));
   }
+  .btn {
+    font-size: 0.8rem;
+  }
 }
 @media screen and (min-width: 800px) {
   .trusted .wrapper {
@@ -363,6 +415,9 @@ img {
   .trusted .title {
     max-width: 37.6875rem;
   }
+  .btn {
+    font-size: 0.85rem;
+  }
 }
 @media screen and (min-width: 1100px) {
   .trusted .wrapper {
@@ -371,6 +426,9 @@ img {
   }
   .trusted .wrapper .item .footer-img {
     height: 2rem;
+  }
+  .btn {
+    font-size: 1rem;
   }
 }
 /* ! DIRECT MAIL SECTION CSS */
