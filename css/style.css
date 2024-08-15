@@ -210,6 +210,7 @@ img {
   right: 0;
   left: 0;
   z-index: var(--z-fixed);
+  box-shadow: 0px 4px 12px 0px hsla(245, 100%, 11%, 0.08);
 }
 @media screen and (max-width: 992px) {
   .nav .btn {
@@ -226,6 +227,7 @@ img {
       width: 40%;
       right: 100%;
       padding: 2rem;
+      -webkit-backdrop-filter: blur(40px);
       backdrop-filter: blur(40px);
       color: var(--text-color);
     }
@@ -292,11 +294,6 @@ img {
         }
         @media screen and (max-width: 468px) {
           .nav .nav-menu .nav-list {
-            width: 85%;
-          }
-        }
-        @media screen and (max-width: 350px) {
-          .nav .nav-menu .nav-list {
             width: 100%;
           }
         }
@@ -342,6 +339,7 @@ img {
     display: none;
     transition: all linear 2.5s;
     z-index: var(--z-fixed);
+    box-shadow: 1px 1px 5px #c1c0c0;
   }
   .nav .nav-menu .dropdown-menu-item:hover .sub-nav-list {
     max-height: 1000px;
@@ -668,7 +666,7 @@ img {
 }
 .fast-launch .accordion .accordion-item .grace__font {
   background: var(--fast-launch-background);
-  color: var(--title-grace-color);
+  color: hsla(180, 31%, 72%, 1);
 }
 .fast-launch .accordion .accordion-item.show .grace__font {
   color: var(--title-grace-color);
@@ -705,9 +703,9 @@ img {
   font-size: 1.25rem;
   max-height: 0;
   overflow: hidden;
+  transition: linear 1s;
 }
 .fast-launch .accordion .accordion-item.show .accordion-content {
-  transition: max-height linear 1s;
   max-height: 1000px;
 }
 /* ! FAST-LAUNCH SECTION RESPONSIVE CSS */
@@ -769,6 +767,7 @@ img {
 .post-pilot-dtc .wrapper .item .user-img {
   width: 4rem;
   height: 4rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .post-pilot-dtc .wrapper .item .user-img .img-fluid {
@@ -789,6 +788,7 @@ img {
   height: 2rem;
   display: grid;
   place-content: center;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .post-pilot-dtc .wrapper .item .description {
@@ -825,14 +825,19 @@ img {
   overflow: hidden;
   background: var(--try-post-pilot-background);
 }
+.try-post-pilot .wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.try-post-pilot .img-container {
+  max-width: 596.31px;
+  transform: scale(105%);
+}
 /* ! TRY POST PILOT SECTION RESPONSIVE CSS */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
   .try-post-pilot .wrapper {
     flex-direction: row-reverse;
-  }
-  .try-post-pilot .img-container {
-    max-width: 596.31px;
-    transform: scale(105%);
+    justify-content: space-between;
   }
   .try-post-pilot .text-content {
     max-width: 613px;
@@ -861,6 +866,7 @@ img {
   font-weight: var(--font-700);
 }
 .latest-trends .wrapper .img-container {
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .latest-trends .wrapper .img-fluid {
@@ -1019,4 +1025,15 @@ img {
       }
     }
   }
+}
+
+/* ! TOP-BAR CSS */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  /* box-shadow: 0px 4px 12px 0px hsla(245, 100%, 11%, 0.08); */
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+  text-transform: capitalize;
 }

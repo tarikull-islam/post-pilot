@@ -16,6 +16,7 @@ const toggleMenu = () => {
     $(".accordion-title").click(function (e) {
       $(this).parent().parent().toggleClass("show");
     });
+    // ! DRAGGING
   });
 })(jQuery);
 
@@ -24,7 +25,7 @@ const sr = ScrollReveal({
   origin: "top",
   distance: "50px",
   duration: 1500,
-  reset: true,
+  reset: false,
 });
 sr.reveal("#home .img-content ");
 sr.reveal("#home .text-content", {
@@ -94,4 +95,33 @@ sr.reveal("#try-post-pilot .text-content"),
 sr.reveal("#footer .wrapper :nth-child(odd), #footer .footer-bottom .ctx-btn", {
   origin: "left",
   duration: 600,
+});
+// ! SCROLL REVEAL ORIGIN TOP ANIMATION...
+const srt = ScrollReveal({
+  origin: "top",
+  distance: "50px",
+  duration: 700,
+  reset: true,
+});
+srt.reveal("", {});
+// ! SCROLL REVEAL ORIGIN RIGHT ANIMATION...
+const srr = ScrollReveal({
+  origin: "right",
+  distance: "50px",
+  duration: 700,
+  reset: true,
+});
+// ! SCROLL REVEAL ORIGIN BOTTOM ANIMATION...
+const srb = ScrollReveal({
+  origin: "bottom",
+  distance: "50px",
+  duration: 700,
+  reset: true,
+});
+// ! SCROLL REVEAL ORIGIN LEFT ANIMATION...
+const srl = ScrollReveal({
+  origin: "left",
+  distance: "50px",
+  duration: 700,
+  reset: true,
 });
