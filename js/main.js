@@ -68,6 +68,7 @@ const sliderRegister = () => {
   };
   const dragStop = () => {
     isDrugStart = !isDrugStart;
+    paginationSlider.style.cursor = "auto";
   };
   const dragging = (e) => {
     if (!isDrugStart) return;

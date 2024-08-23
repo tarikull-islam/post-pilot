@@ -1060,6 +1060,7 @@ img {
     text-align: center;
     padding: 1rem;
     font-size: 1rem;
+    cursor: ;
   }
 }
 @keyframes headerSticky {
