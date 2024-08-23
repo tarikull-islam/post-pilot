@@ -53,3 +53,30 @@ const noticeRegister = () => {
 };
 // Notice Register Function invoke
 noticeRegister();
+
+/*=============== Slider Register ===============*/
+const sliderRegister = () => {
+  const paginationSlider = document.querySelector("#post-pilot-dtc .wrapper");
+  let isDrugStart = false,
+    prevPageX,
+    prevScrollLeft;
+  const dragStart = (e) => {
+    isDrugStart = !isDrugStart;
+    prevPageX = e.pageX;
+    prevScrollLeft = paginationSlider.scrollLeft;
+    paginationSlider.style.cursor = "grab";
+  };
+  const dragStop = () => {
+    isDrugStart = !isDrugStart;
+  };
+  const dragging = (e) => {
+    if (!isDrugStart) return;
+    e.preventDefault();
+    let positionDiff = e.pageX - prevPageX;
+    paginationSlider.scrollLeft = prevScrollLeft - positionDiff;
+  };
+  paginationSlider.addEventListener("mousedown", dragStart);
+  paginationSlider.addEventListener("mousemove", dragging);
+  paginationSlider.addEventListener("mouseup", dragStop);
+};
+sliderRegister();
