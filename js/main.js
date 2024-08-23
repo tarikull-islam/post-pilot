@@ -1,127 +1,55 @@
-// ! NAV FLY-MENU TOGGLE CLASS
-const toggleMenu = () => {
-  document.body.classList.toggle("fly-menu");
-};
-// ! JQUERY CODE
-(function ($) {
-  $(document).ready(function () {
-    "use strict";
-    $(window).resize(function () {
-      const currentWidth = $(window).width();
-      if (currentWidth > 768) {
-        $("body").removeClass("fly-menu");
-      }
-    });
-    // ! ACCORDION
-    $(".accordion-title").click(function (e) {
-      $(this).parent().parent().toggleClass("show");
-    });
-    // ! DRAGGING
-  });
-})(jQuery);
+/*=============== SHOW MENU ===============*/
+const navToggle = document.getElementById("open-fly-menu"),
+  navClose = document.getElementById("close-fly-menu");
 
-// ! SCROLL REVEAL ANIMATION
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "50px",
-  duration: 1500,
-  reset: false,
-});
-sr.reveal("#home .img-content ");
-sr.reveal("#home .text-content", {
-  origin: "bottom",
-  distance: "50px",
-  duration: 1000,
-});
-sr.reveal("#trusted .title");
-sr.reveal("#trusted .wrapper :nth-child(odd)", {
-  duration: 800,
-});
-sr.reveal("#trusted .wrapper :nth-child(even)", {
-  duration: 400,
-  origin: "bottom",
-});
-sr.reveal("#direct-mail .title", {
-  origin: "right",
-  duration: 1000,
-});
-sr.reveal("#post-pilot .title", {
-  origin: "left",
-  duration: 1000,
-  distance: "80px",
-});
-sr.reveal("#post-pilot .wrapper .item", {
-  origin: "top",
-  duration: 1100,
-  distance: "70px",
-});
-sr.reveal("#your-brand .title", {
-  origin: "top",
-  duration: 800,
-});
-sr.reveal("#your-brand .wrapper :nth-child(odd)", {
-  origin: "right",
-  duration: 800,
-});
-sr.reveal("#your-brand .wrapper :nth-child(even)", {
-  origin: "left",
-  duration: 600,
-});
-sr.reveal("#fast-launch .title , #fast-launch .accordion-item", {
-  origin: "top",
-  duration: 500,
-});
-sr.reveal(
-  "#footer .wrapper :nth-child(even),#footer .footer-bottom .brand-parent",
-  {
-    origin: "right",
-    duration: 800,
+/* Menu show */
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    document.body.classList.add("fly-menu");
+  });
+}
+
+/* Menu hidden */
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    document.body.classList.remove("fly-menu");
+  });
+}
+
+/*=============== REMOVE MENU MOBILE ===============*/
+const navLink = document.querySelectorAll(".nav-link ,.sub-nav-link");
+
+const linkAction = () => {
+  // When we click on each nav__link, we remove the fly-menu class
+  document.body.classList.remove("fly-menu");
+};
+navLink.forEach((n) => n.addEventListener("click", linkAction));
+
+/*=============== CHANGE STICKY HEADER ===============*/
+const scrollHeader = () => {
+  const header = document.getElementById("header");
+  // Add a class if the bottom offset is greater than 100 of the viewport
+  window.scrollY >= 100
+    ? header.classList.add("sticky")
+    : header.classList.remove("sticky");
+};
+window.addEventListener("scroll", scrollHeader);
+
+/*=============== NOTICE TOP BAR HANDLE ===============*/
+const noticeRegister = () => {
+  const isHide = sessionStorage.getItem("isHide"),
+    noticeBar = document.getElementById("notice-bar"),
+    toggleNoticeBar = document.getElementById("notice-toggle");
+  //   Add a class if sessionStorage have isHide true
+  if (isHide) {
+    noticeBar.classList.add("hide");
   }
-);
-sr.reveal("#latest-trends .title", {
-  duration: 600,
-});
-sr.reveal("#latest-trends .wrapper .item"),
-  {
-    duration: 900,
+  //    Notice Board Fun.. Handle and add classes
+  const noticeHandle = () => {
+    sessionStorage.setItem("isHide", true);
+    noticeBar.classList.add("hide");
   };
-sr.reveal("#try-post-pilot .img-container", {
-  origin: "right",
-});
-sr.reveal("#try-post-pilot .text-content"),
-  {
-    origin: "left",
-  };
-sr.reveal("#footer .wrapper :nth-child(odd), #footer .footer-bottom .ctx-btn", {
-  origin: "left",
-  duration: 600,
-});
-// ! SCROLL REVEAL ORIGIN TOP ANIMATION...
-const srt = ScrollReveal({
-  origin: "top",
-  distance: "50px",
-  duration: 700,
-  reset: true,
-});
-srt.reveal("", {});
-// ! SCROLL REVEAL ORIGIN RIGHT ANIMATION...
-const srr = ScrollReveal({
-  origin: "right",
-  distance: "50px",
-  duration: 700,
-  reset: true,
-});
-// ! SCROLL REVEAL ORIGIN BOTTOM ANIMATION...
-const srb = ScrollReveal({
-  origin: "bottom",
-  distance: "50px",
-  duration: 700,
-  reset: true,
-});
-// ! SCROLL REVEAL ORIGIN LEFT ANIMATION...
-const srl = ScrollReveal({
-  origin: "left",
-  distance: "50px",
-  duration: 700,
-  reset: true,
-});
+  toggleNoticeBar.addEventListener("click", noticeHandle);
+};
+// Notice Register Function invoke
+noticeRegister();

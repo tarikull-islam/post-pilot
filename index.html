@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- ! Add favicon icon here -->
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="./assets/Logo-postpilot.webp"
+      type="image/x-icon"
+    />
     <title>Post Pilot</title>
     <!-- ! css here -->
     <link
@@ -26,19 +30,24 @@
       defer
     ></script>
     <script src="./js/scrollreveal.min.js" defer></script>
-    <script src="./js/jquery.min.js" defer></script>
     <script src="./js/bootstrap.bundle.min.js" defer></script>
     <script src="./js/main.js" defer></script>
   </head>
   <body>
     <header id="header" class="header">
-      <nav class="top-bar">
+      <nav id="notice-bar" class="notice-bar position-relative">
         <p>
           This product make for Work example ©
-          <a target="_blank" href="https://facebook.com/sifat.edit"
+          <a target="_blank" href="https://www.facebook.com/SIFAT.EDITz/"
             >Tarikul i.</a
           >
         </p>
+        <span
+          id="notice-toggle"
+          class="notice-toggle position-absolute translate-middle-y start-0 top-50"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </span>
       </nav>
       <nav
         class="nav container py-2 align-items-center justify-content-between flex-nowrap"
@@ -48,7 +57,7 @@
           <img src="./assets/Logo-postpilot.webp" alt="Logo-postpilot" />
         </a>
         <div class="nav-menu">
-          <div class="nav-list d-md-flex align-items-md-center">
+          <div id="nav-list" class="nav-list d-md-flex align-items-md-center">
             <div class="nav-item pb-2 pb-md-0 dropdown-menu-item">
               <span>Resources</span>
               <i class="fa-solid fa-angle-down"></i>
@@ -83,15 +92,14 @@
             <div class="nav-item pb-2 pb-md-0">
               <a href="#" class="nav-link p-0">Pricing</a>
             </div>
-            <div onclick="toggleMenu()" class="close-fly-menu d-md-none">
-              X
+            <div id="close-fly-menu" class="close-fly-menu d-md-none">
               <i class="fa-solid fa-xmark"></i>
             </div>
           </div>
           <div class="ctx-action d-flex gap-3 align-items-center">
             <a href="#" class="btn btn__fill-white">Login</a>
             <a href="#" class="btn btn__fill-yellow">Create free account</a>
-            <div onclick="toggleMenu()" class="open-fly-menu d-md-none">
+            <div id="open-fly-menu" class="open-fly-menu d-md-none">
               <i class="fa-solid fa-bars"></i>
             </div>
           </div>
@@ -100,7 +108,7 @@
     </header>
     <main class="overflow-x-hidden">
       <section class="home pt-3 pt-md-0" id="home">
-        <div class="container d-md-flex align-items-center py-5">
+        <div class="container d-md-flex align-items-center py-2">
           <div class="text-content">
             <h2 class="title">
               Meet your <br />
@@ -746,7 +754,7 @@
             </ul>
           </nav>
           <nav class="nav">
-            <h6 class="heading opacity-0">empty</h6>
+            <h6 class="heading opacity-0">''</h6>
             <ul>
               <li class="nav-item">
                 <a href="#" class="nav-link">Pricing</a>
@@ -769,43 +777,7 @@
             <h6 class="heading">Contact</h6>
             <ul>
               <li class="nav-item d-flex align-items-center gap-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="25"
-                  height="24"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                >
-                  <path
-                    d="M21.1662 4H4.80256C3.79841 4 2.98438 4.79594 2.98438 5.77778V18.2222C2.98438 19.2041 3.79841 20 4.80256 20H21.1662C22.1704 20 22.9844 19.2041 22.9844 18.2222V5.77778C22.9844 4.79594 22.1704 4 21.1662 4Z"
-                    fill="#FFE8DC"
-                    stroke="#212121"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                  />
-                  <path
-                    d="M9.63375 14.8809L8.66406 15.7861"
-                    stroke="#212121"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                  />
-                  <path
-                    d="M16.332 14.8809L17.3017 15.7861"
-                    stroke="#212121"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                  />
-                  <path
-                    d="M17.5284 8.00098L12.983 12.4454L8.4375 8.00098"
-                    stroke="#212121"
-                    stroke-width="2"
-                    stroke-miterlimit="10"
-                    stroke-linecap="square"
-                  />
-                </svg>
+                <img src="./assets/Email.png" alt="email" class="img-fluid" />
                 <p class="email">support@postpilot.com</p>
               </li>
               <li class="nav-item pt-3">
@@ -826,7 +798,7 @@
               />
             </div>
             <p class="copy-right">
-              &copy; 2022 PostPilot, Inc. All rights reserved.
+              &copy; 2024 PostPilot, Inc. All rights reserved.
             </p>
           </div>
           <div
